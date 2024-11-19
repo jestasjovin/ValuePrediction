@@ -1,4 +1,4 @@
-# Value Prediction Using Linear Regression
+# Value Prediction End to End ML Pipeline
 
 The goal of this project is to create an end-to-end machine learning pipeline that will enable the prediction of values, such as prices of services and items, consumption values, and more.
 
