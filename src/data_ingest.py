@@ -35,3 +35,14 @@ class IngestZip(IngestData):
 
         # Return the DataFrame
         return df
+
+
+# Factory to create DataIngestors
+class DataIngestorFactory:
+    @staticmethod
+    def get_data_ingestor(file_extension: str) -> IngestData:
+        if file_extension == ".zip":
+            return IngestZip()
+        else:
+            raise ValueError(f"No ingestor available for file extension: {file_extension}")
+
