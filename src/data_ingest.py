@@ -38,6 +38,7 @@ class IngestZip(IngestData):
 
 
 # Factory to create DataIngestors
+# this enables having support for different file types
 class DataIngestorFactory:
     @staticmethod
     def get_data_ingestor(file_extension: str) -> IngestData:
@@ -46,3 +47,19 @@ class DataIngestorFactory:
         else:
             raise ValueError(f"No ingestor available for file extension: {file_extension}")
 
+
+if __name__ == "__main__":
+    # my file path
+    file_path = "/home/jvjestas/samples/price_prediction/data/archive.zip"  # Change this to your actual file path
+
+    # Determine the file extension
+    file_extension = os.path.splitext(file_path)[1]
+
+    # appropiate data ingestor
+    data_ingestor = DataIngestorFactory.get_data_ingestor(file_extension)
+
+    # Ingest the data and load it into a DataFrame
+    df = data_ingestor.ingest(file_path)
+
+    print(df.head()) 
+    pass
