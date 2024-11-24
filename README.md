@@ -14,8 +14,15 @@ The goal is to implement most parts directly in order to understand the core and
 
 The following are the steps involved in implementing the project
 
-## 1. Data
+## 1. Data ingesting
 
-This step involves creating an abstract method to ingest data from a given file, such as a .zip file containing CSV files.
+This step involves creating an abstract method to load data from a given file, such as a .zip file containing CSV files.
 
+* data processing using Julius .....visualisation and etc
 ---
+
+## 2. Stratergy plan
+deciding tools and algorithms to use
+### Analysis
+We are going to analyse and study data various properties
+-creating methods that will print us analysis an reports
